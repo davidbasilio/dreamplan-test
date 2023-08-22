@@ -6,7 +6,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
-from sklearn.preprocessing import MinMaxScaler
 
 class HousePrice:
     # initialize the object
@@ -40,7 +39,6 @@ class HousePrice:
 
         # fit the model
         self.model.fit(x_train, y_train)
-        print(self.model.coef_)
 
         # test the model
         y_predicted = self.model.predict(x_test)
